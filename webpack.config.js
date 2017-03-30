@@ -4,6 +4,10 @@ module.exports = {
 		filename: './static/js/bundle.js'
 	},
 
+	devServer: {
+	    historyApiFallback: true
+	},
+
 	watch: true,
 
 	module: {

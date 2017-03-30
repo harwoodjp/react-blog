@@ -13,7 +13,7 @@ class Content extends React.Component {
 	render() {
 		return( 
 			<Wrapper>
-				Content
+				Content: {this.props.active}
 			</Wrapper>				    
 		)			
 	}

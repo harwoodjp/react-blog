@@ -7,7 +7,7 @@ class App extends React.Component {
 		return (
 			<div className="master">
 		      <Sidebar />
-		      <Content />
+		      <Content active={this.props.active} />
 		    </div>
 		)
 	}

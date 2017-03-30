@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components"
+import {  BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 const Wrapper = styled.div`
 	background:#E99E9E;
@@ -12,7 +13,8 @@ class Sidebar extends React.Component {
 	render() {
 		return( 		    
 			<Wrapper>
-				Sidebar
+				<Link to="/">Home</Link>
+				<Link to="/pix">Pix</Link>
 			</Wrapper>
 		)
 	}
