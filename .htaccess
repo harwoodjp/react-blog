@@ -1,0 +1,9 @@
+DirectoryIndex index.html
+ErrorDocument 404 http://likeadiv.com/
+
+RewriteEngine On  
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+RewriteRule ^ /index.html [L]
+
