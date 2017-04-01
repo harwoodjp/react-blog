@@ -28,7 +28,7 @@ class Blog extends React.Component {
 		const converter = new Showdown.Converter();	
 		return( 
 			<Wrapper>
-				<Date> {this.props.date.substr(0,16)} </Date>			
+				<Date> {this.props.date} </Date>			
 				<Title>{this.props.title}</Title>
 				<Body> {renderHTML(converter.makeHtml(this.props.body))} </Body>
 			</Wrapper>				    
