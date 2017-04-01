@@ -19,7 +19,9 @@
     "raw-loader": "~0.5.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-render-html": "^0.1.6",
     "sass-loader": "~5.0.1",
+    "showdown": "^1.6.4",
     "style-loader": "~0.13.1",
     "webpack": "~2.2.1"
   },
