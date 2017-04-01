@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from "styled-components"
 
+import Post from './Post'
+
 const Wrapper = styled.div`
-	background:#FFA953;
-	width:75%;
-	height:150%;
-	position:relative;
-	left:25%;
+	align-items:center;
+	display:flex;
+	flex-direction:column;
 `;
 
 class Blog extends React.Component {
@@ -17,7 +17,9 @@ class Blog extends React.Component {
 	render() {
 		return( 
 			<Wrapper>
-				im a blog
+				<Post />
+				<Post />
+				<Post />
 			</Wrapper>				    
 		)			
 	}

@@ -1,14 +1,19 @@
 import React from 'react';
+import styled from "styled-components"
+
 import Sidebar from './Sidebar';
 import Content from './Content';
+
+const Page = styled.div`
+`;
 
 class App extends React.Component {
 	render() {
 		return (
-			<div className="master">
+			<Page>
 		      <Sidebar />
 		      <Content active={this.props.active} />
-		    </div>
+		    </Page>
 		)
 	}
 }

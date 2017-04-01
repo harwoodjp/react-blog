@@ -5,11 +5,10 @@ import Blog from "./Blog"
 import Pix from "./Pix"
 
 const Wrapper = styled.div`
-	background:#FFA953;
-	width:75%;
-	height:150%;
+	color:#2c2d2d;    
+	width:70%;
 	position:relative;
-	left:25%;
+	left:30%;
 `;
 
 class Content extends React.Component {
