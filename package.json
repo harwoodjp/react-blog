@@ -23,7 +23,8 @@
     "sass-loader": "~5.0.1",
     "showdown": "^1.6.4",
     "style-loader": "~0.13.1",
-    "webpack": "~2.2.1"
+    "webpack": "~2.2.1",
+    "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
     "react-router": "^4.0.0",

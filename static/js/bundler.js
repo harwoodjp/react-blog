@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import renderHTML from 'react-render-html';
 import Showdown from 'showdown';
+import FetchPolyfill from 'whatwg-fetch';
 
 /* html */
 require('../../index.html')
