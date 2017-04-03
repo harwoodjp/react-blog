@@ -5,6 +5,7 @@ import Sidebar from './Sidebar';
 import Content from './Content';
 
 const Page = styled.div`
+	
 `;
 
 class App extends React.Component {

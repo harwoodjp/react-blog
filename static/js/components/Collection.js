@@ -29,8 +29,8 @@ class Collection extends React.Component {
 	render() {
 		return( 
 			<Wrapper>
-				<Date>2017 Mar</Date>
-				<Text>{this.props.name}</Text>
+				<Date>{this.props.name.substr(0,8)}</Date>
+				<Text>{this.props.name.substr(9,this.props.name.length)}</Text>
 			</Wrapper>				    
 		)			
 	}
