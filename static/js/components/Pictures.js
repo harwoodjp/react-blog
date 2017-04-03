@@ -31,7 +31,7 @@ function mapCollections(json, pixComponent) {
 }
 
 
-class Pix extends React.Component {
+class Pictures extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { collections: [] };
@@ -48,4 +48,4 @@ class Pix extends React.Component {
 		)			
 	}
 }
-export default Pix
+export default Pictures

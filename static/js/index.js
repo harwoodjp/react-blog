@@ -8,7 +8,7 @@ ReactDOM.render(
 	<Router history={browserHistory}>
 		<div>
         	<Route exact path="/" component={props => <App active="blog"/>}/>
-        	<Route path="/pix" component={props => <App active="pix"/>}/>
+        	<Route path="/pictures" component={props => <App active="pictures"/>}/>
         </div>
     </Router>,
 	document.getElementById("app")

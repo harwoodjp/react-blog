@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components"
 
 import Blog from "./Blog"
-import Pix from "./Pix"
+import Pictures from "./Pictures"
 
 const Wrapper = styled.div`
 	color:#2c2d2d;    
@@ -20,10 +20,10 @@ class Content extends React.Component {
 				</Wrapper>				    
 			)			
 		}
-		if (this.props.active == "pix") {
+		if (this.props.active == "pictures") {
 			return( 
 				<Wrapper>
-					<Pix />
+					<Pictures />
 				</Wrapper>				    
 			)			
 		}
