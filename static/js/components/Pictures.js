@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `;
 
 function fetchCollections(pixComponent) {
-	let f = fetch('https://harwoodjp.com/api/collections', { method: 'get' })
+	let f = fetch('http://localhost:5000/api/collections', { method: 'get' })
 		.then(function(response) {
 			if (response.status === 200) {
 				return response.text();
@@ -37,7 +37,7 @@ class Pictures extends React.Component {
 		this.state = { collections: [] };
 	}
 	componentDidMount() {
-		document.title = "Pix";
+		document.title = "Pictures";
 		fetchCollections(this);	
 	}
 	render() {
