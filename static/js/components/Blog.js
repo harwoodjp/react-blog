@@ -21,7 +21,7 @@ const ArchiveBtn = styled.button`
 
 function fetchPosts(blogComponent, limit) {
 	let endpointUrl;
-	limit===1 ? endpointUrl='http://localhost:5000/api/blog' : endpointUrl='http://localhost:5000/api/blog/all'
+	limit===1 ? endpointUrl='https://harwoodjp.com/api/blog' : endpointUrl='https://harwoodjp.com/api/blog/all'
 	let f = fetch(endpointUrl, { method: 'get' })
 		.then(function(response) {
 			if (response.status === 200) {
