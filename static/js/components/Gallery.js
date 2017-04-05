@@ -7,7 +7,12 @@ function collectionIndex() {
 	let pathArray = window.location.pathname.split( '/' ),
 		collectionIndex = pathArray[pathArray.length-1];
 	return collectionIndex;
-}		
+}	
+function collectionName() {
+	let collectionName = document.querySelector("img").getAttribute("src").split( '/' )[5];
+	return collectionName
+}
+
 function s3Url(key) {
 	return `https://s3.us-east-2.amazonaws.com/harwoodjp-public/photos${key}`
 }
@@ -23,6 +28,7 @@ function fetchPhotos(galleryComponent) {
 	} )
 };
 
+
 function mapCollections(json, galleryComponent) {
 	json = JSON.parse(json);
 	let photosMapped = json.map(function(json) {
@@ -31,6 +37,16 @@ function mapCollections(json, galleryComponent) {
 	    )
 	})
 	galleryComponent.setState({photos: photosMapped})
+	galleryComponent.setState({collectionName: collectionName()})
+}
+
+function randomDegreesOnPhotos(photos) {
+	const degrees = [-2, 0, 2, 4, 6, 8, 10];
+	let random;
+	document.querySelectorAll("img").forEach( (img) => {
+		random = degrees[Math.floor(Math.random() * degrees.length)];	
+		img.style.transform = `rotate(${random}deg)`;
+	})
 }
 
 const Wrapper = styled.div`
@@ -52,30 +68,29 @@ const Photo = styled.img`
 	margin:1em;
 `;
 
-function randomDegreesOnPhotos(photos) {
-	const degrees = [-2, 0, 2, 4, 6, 8, 10];
-	let random;
-	document.querySelectorAll("img").forEach( (img) => {
-		random = degrees[Math.floor(Math.random() * degrees.length)];	
-		img.style.transform = `rotate(${random}deg)`;
-	})
-}
+const CollectionName = styled.h3`
+	color:#f4f5f7;
+	display:block;
+	text-align:center;
+	width:100%;
+`;
 
 class Gallery extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { title: "", photos: [] };
+		this.state = { collectionName: "", photos: [] };
 	}
 	componentDidMount() {
 		document.title = "Collections";
 		fetchPhotos(this);	
 	}
 	componentDidUpdate() {
-		randomDegreesOnPhotos(this.state.photos)		
+		//randomDegreesOnPhotos(this.state.photos)		
 	}
 	render() {
 		return( 
 			<Wrapper>
+				<CollectionName>{this.state.collectionName}</CollectionName>			
 				{this.state.photos}
 			</Wrapper>				    
 		)			

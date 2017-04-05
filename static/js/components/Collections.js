@@ -21,7 +21,7 @@ function mapCollections(json, pixComponent) {
 	let index = -1;
 	let collectionsMapped = json.map(function(json) {
 		index++;
-	    return <StyledLink to={`/collections/${index}`}><Collection name={json} key={index} index={index} /></StyledLink>
+	    return <StyledLink to={`/collections/${index}`} key={index}><Collection name={json} key={index} index={index} /></StyledLink>
 	})
 	pixComponent.setState({collections: collectionsMapped})
 }
