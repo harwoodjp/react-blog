@@ -12,7 +12,7 @@ function s3Url(key) {
 	return `https://s3.us-east-2.amazonaws.com/harwoodjp-public/photos${key}`
 }
 function fetchPhotos(galleryComponent) {
-	let f = fetch(`http://localhost:5000/api/collections/${collectionIndex()}`, { method: 'get' })
+	let f = fetch(`https://harwoodjp.com/api/collections/${collectionIndex()}`, { method: 'get' })
 		.then(function(response) {
 			if (response.status === 200) {
 				return response.text();
