@@ -1,14 +1,8 @@
 import React from 'react';
 import styled from "styled-components"
+import { Link } from 'react-router-dom'
 
 import Collection from './Collection'
-
-const Wrapper = styled.div`
-	display:flex;
-	flex-wrap:wrap;
-	justify-content:center;
-	
-`;
 
 function fetchCollections(pixComponent) {
 	let f = fetch('https://harwoodjp.com/api/collections', { method: 'get' })
@@ -24,20 +18,32 @@ function fetchCollections(pixComponent) {
 
 function mapCollections(json, pixComponent) {
 	json = JSON.parse(json);
+	let index = -1;
 	let collectionsMapped = json.map(function(json) {
-	    return <Collection name={json} key={json} />
+		index++;
+	    return <StyledLink to={`/collections/${index}`}><Collection name={json} key={index} index={index} /></StyledLink>
 	})
 	pixComponent.setState({collections: collectionsMapped})
 }
 
+const Wrapper = styled.div`
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	
+`;
+const StyledLink = styled(Link)`
+	color:#2c2d2d;
+	text-decoration:none;
+`;
 
-class Pictures extends React.Component {
+class Collections extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { collections: [] };
 	}
 	componentDidMount() {
-		document.title = "Pictures";
+		document.title = "Collections";
 		fetchCollections(this);	
 	}
 	render() {
@@ -48,4 +54,4 @@ class Pictures extends React.Component {
 		)			
 	}
 }
-export default Pictures
+export default Collections

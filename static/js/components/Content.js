@@ -2,7 +2,8 @@ import React from 'react';
 import styled from "styled-components"
 
 import Blog from "./Blog"
-import Pictures from "./Pictures"
+import Gallery from "./Gallery"
+import Collections from "./Collections"
 
 const Wrapper = styled.div`
 	color:#2c2d2d;    
@@ -11,22 +12,19 @@ const Wrapper = styled.div`
 	left:30%;
 `;
 
+const pageDict = {
+	blog: <Blog />,
+	gallery: <Gallery />,
+	collections: <Collections />,
+}
+
 class Content extends React.Component {
 	render() {
-		if (this.props.active == "blog") {
 			return( 
 				<Wrapper>
-					<Blog />
+					{pageDict[this.props.active]}
 				</Wrapper>				    
 			)			
-		}
-		if (this.props.active == "pictures") {
-			return( 
-				<Wrapper>
-					<Pictures />
-				</Wrapper>				    
-			)			
-		}
 	}
 }
 export default Content

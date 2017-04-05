@@ -31,7 +31,7 @@ class Sidebar extends React.Component {
 			<Wrapper>
 				<LinkSet>
 					<StyledLink to="/">Blog</StyledLink>
-					<StyledLink to="/pictures">Pictures</StyledLink>
+					<StyledLink to="/collections">Pictures</StyledLink>
 				</LinkSet>
 			</Wrapper>
 		)

@@ -24,7 +24,6 @@ const Text = styled.h3`
 
 class Collection extends React.Component {
 	componentDidMount() {
-		document.title = "Pix";
 	}
 	render() {
 		return( 

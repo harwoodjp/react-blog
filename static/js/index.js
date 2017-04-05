@@ -8,7 +8,8 @@ ReactDOM.render(
 	<Router history={browserHistory}>
 		<div>
         	<Route exact path="/" component={props => <App active="blog"/>}/>
-        	<Route path="/pictures" component={props => <App active="pictures"/>}/>
+        	<Route exact path="/collections" component={props => <App active="collections"/>}/>
+        	<Route path="/collections/:index" component={props => <App active="gallery"/>}/>
         </div>
     </Router>,
 	document.getElementById("app")

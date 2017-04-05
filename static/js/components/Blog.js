@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `;
 const ArchiveBtn = styled.button`
 	border:none;
-	background-color: #363d3f;	
+	background-color:#363d3f;	
 	color:#f4f5f7;    
 	cursor:pointer;
 	margin:1em;
