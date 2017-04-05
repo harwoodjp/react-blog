@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Blog from "./Blog"
 import Gallery from "./Gallery"
 import Collections from "./Collections"
+import Contact from "./Contact"
 
 const Wrapper = styled.div`
 	color:#2c2d2d;    
@@ -22,6 +23,7 @@ const pageDict = {
 	blog: <Blog />,
 	gallery: <Gallery />,
 	collections: <Collections />,
+	contact: <Contact />
 }
 
 class Content extends React.Component {
