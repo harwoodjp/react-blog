@@ -13,8 +13,9 @@ function collectionName() {
 	return collectionName
 }
 
-function s3Url(key) {
-	return `https://s3.us-east-2.amazonaws.com/harwoodjp-public/photos${key}`
+function s3Url(key, thumb) {
+	if (thumb) return `https://s3.us-east-2.amazonaws.com/harwoodjp-public/photos${key}`
+	if (!thumb) return `https://s3.us-east-2.amazonaws.com/harwoodjp-public/photos${key}`.replace("thumb/","")
 }
 function fetchPhotos(galleryComponent) {
 	let f = fetch(`https://harwoodjp.com/api/collections/${collectionIndex()}`, { method: 'get' })
@@ -33,7 +34,9 @@ function mapCollections(json, galleryComponent) {
 	json = JSON.parse(json);
 	let photosMapped = json.map(function(json) {
 	    return(
-    		<Photo src={s3Url(json)} key={json} />
+    		<a href={s3Url(json, false)} target="_blank" key={json}>
+    			<Photo src={s3Url(json, true)} key={json} />
+    		</a>
 	    )
 	})
 	galleryComponent.setState({photos: photosMapped})

@@ -10,9 +10,18 @@ const StyledLink = styled(Link)`
 	&:hover {
 		text-decoration: underline;
 	}
+	@media (max-width: 900px) {
+		display:inline;
+		padding:.25em;
+  	}
+
 `;
 const LinkSet = styled.div`
 	margin-top:1em;
+	@media (max-width: 900px) {
+		margin-top:0;
+  	}
+
 `;
 const Wrapper = styled.div`
 	align-items:center;
@@ -23,6 +32,13 @@ const Wrapper = styled.div`
 	position:fixed;
 	width:30%;	
 	z-index:1;
+	@media (max-width: 900px) {
+		justify-content:flex-end;
+		flex-direction:row;
+		width:100%;
+		height:10%;
+  	}
+
 `;
 
 class Sidebar extends React.Component {

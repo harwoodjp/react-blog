@@ -10,6 +10,12 @@ const Wrapper = styled.div`
 	width:70%;
 	position:relative;
 	left:30%;
+	@media (max-width: 900px) {
+		left:0%;
+		top:5em;
+		position:relative;
+		width:100%;
+	}	
 `;
 
 const pageDict = {
