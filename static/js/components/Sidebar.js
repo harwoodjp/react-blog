@@ -33,10 +33,10 @@ const Wrapper = styled.div`
 	width:30%;	
 	z-index:1;
 	@media (max-width: 900px) {
-		justify-content:flex-end;
 		flex-direction:row;
-		width:100%;
 		height:10%;
+		justify-content:flex-end;
+		width:100%;
   	}
 
 `;

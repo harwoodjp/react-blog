@@ -11,9 +11,9 @@ const Wrapper = styled.div`
 	position:relative;
 	left:30%;
 	@media (max-width: 900px) {
-		left:0%;
+		left:0;
+		position:relative;		
 		top:5em;
-		position:relative;
 		width:100%;
 	}	
 `;
