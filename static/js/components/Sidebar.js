@@ -12,6 +12,7 @@ const StyledLink = styled(Link)`
 	}
 	@media (max-width: 900px) {
 		display:inline;
+		font-size:2em;
 		padding:.25em;
   	}
 
