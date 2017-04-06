@@ -5,6 +5,10 @@ import renderHTML from 'react-render-html';
 
 const Body = styled.div`
 	line-height:1.5;
+	@media (max-width: 900px) {
+		font-size:.9em;
+	}
+
 `;
 const Date = styled.h3`
 	align-self:flex-end;
@@ -13,6 +17,11 @@ const Date = styled.h3`
 	margin:0;
 `;
 const Title = styled.h1`
+	@media (max-width: 900px) {
+		font-size:1.2em;
+		font-weight:bold;
+	}
+
 `;
 const Wrapper = styled.div`
     background-color: #f4f5f7;

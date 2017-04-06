@@ -9,8 +9,8 @@ ReactDOM.render(
 		<div>
         	<Route exact path="/" component={props => <App active="blog"/>}/>
         	<Route exact path="/collections" component={props => <App active="collections"/>}/>
-        	<Route path="/collections/:index" component={props => <App active="gallery"/>}/>
-        	<Route path="/contact" component={props => <App active="contact"/>}/>
+        	<Route exact path="/collections/:index" component={props => <App active="gallery"/>}/>
+        	<Route exact path="/contact" component={props => <App active="contact"/>}/>
         </div>
     </Router>,
 	document.getElementById("app")

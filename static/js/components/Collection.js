@@ -11,6 +11,9 @@ const Wrapper = styled.div`
 	padding:2em;
 	justify-content:center;
 	margin:1em;
+	@media (max-width: 900px) {
+	}
+
 `;
 const Date = styled.div`
 	color:#606266

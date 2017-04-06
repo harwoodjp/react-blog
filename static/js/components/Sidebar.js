@@ -10,9 +10,10 @@ const AvatarWrapper = styled.div`
 	margin-top:2em;
 	@media (max-width: 900px) {
 		margin-left:1em;
+		margin-right:1em;
 		margin-top:0;
-		height:4em;
-		width:4em;
+		height:2.5em;
+		width:2.5em;
 	}
 
 `;
@@ -37,7 +38,8 @@ const StyledLink = styled(Link)`
 	}
 	@media (max-width: 900px) {
 		display:inline;
-		font-size:2em;
+		font-size:1.25em;
+		margin-right:.5em;
 		padding:.25em;
   	}
 
@@ -46,6 +48,7 @@ const LinkSet = styled.div`
 	margin-top:1em;
 	@media (max-width: 900px) {
 		margin-top:0;
+		margin-right:2em;
   	}
 
 `;
@@ -60,7 +63,7 @@ const Wrapper = styled.div`
 	z-index:1;
 	@media (max-width: 900px) {
 		flex-direction:row;
-		height:10%;
+		height:7%;
 		justify-content:space-between;
 		overflow:scroll;		
 		width:100%;

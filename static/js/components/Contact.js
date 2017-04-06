@@ -24,7 +24,8 @@ const ContactForm = styled.form`
 	}
 	.submit {
 		background-color:#277276;
-		color:#f4f5f7;    		
+		color:#f4f5f7;    	
+		cursor:pointer;	
 	}
 	textarea {
 		min-height:15em;

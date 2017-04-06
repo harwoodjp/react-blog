@@ -69,6 +69,13 @@ const Photo = styled.img`
 	padding:.25em;
 	justify-content:center;
 	margin:1em;
+	@media (max-width: 600px) {
+		width:70%;
+		height:auto
+		margin:0 auto;
+		margin-bottom:2em;
+	}
+
 `;
 
 const CollectionName = styled.h3`
