@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 const ContactForm = styled.form`
     background-color: #363d3f;
     padding:1em;
-	margin-top:2em;
+	margin-top:1em;
 	width:60%;
 	input, textarea {
 		background-color:#f4f5f7;    		
@@ -50,10 +50,10 @@ class Contact extends React.Component {
 		return( 
 			<Wrapper>
 				<ContactForm action="https://formspree.io/harwoodjp@g.cofc.edu" method="POST">
-				    <input type="text" name="name" placeholder="John Doe" />
-				    <input type="email" name="_replyto" placeholder="john@doe.com" />
-				    <textarea name="body" placeholder="I'd like to inquire about..."></textarea>
-				    <input className="submit" type="submit" value="Send" />
+				    <input required type="text" name="name" placeholder="John Doe" />
+				    <input required type="email" name="_replyto" placeholder="john@doe.com" />
+				    <textarea required name="body" placeholder="I'd like to inquire about..."></textarea>
+				    <input required className="submit" type="submit" value="Send" />
 				</ContactForm>
 			</Wrapper>				    
 		)			

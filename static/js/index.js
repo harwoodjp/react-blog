@@ -11,6 +11,7 @@ ReactDOM.render(
         	<Route exact path="/collections" component={props => <App active="collections"/>}/>
         	<Route exact path="/collections/:index" component={props => <App active="gallery"/>}/>
         	<Route exact path="/contact" component={props => <App active="contact"/>}/>
+        	<Route exact path="/resume" component={props => <App active="resume"/>}/>
         </div>
     </Router>,
 	document.getElementById("app")

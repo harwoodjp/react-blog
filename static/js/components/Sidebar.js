@@ -7,7 +7,7 @@ const AvatarWrapper = styled.div`
 	overflow:hidden;
 	height:10vw;
 	width:10vw;
-	margin-top:2em;
+	margin-top:3em;
 	@media (max-width: 900px) {
 		margin-left:1em;
 		margin-right:1em;
@@ -38,7 +38,7 @@ const StyledLink = styled(Link)`
 	}
 	@media (max-width: 900px) {
 		display:inline;
-		font-size:1.25em;
+		font-size:1.1em;
 		margin-right:.5em;
 		padding:.25em;
   	}
