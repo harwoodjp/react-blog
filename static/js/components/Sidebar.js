@@ -63,11 +63,14 @@ const Wrapper = styled.div`
 	z-index:1;
 	@media (max-width: 900px) {
 		flex-direction:row;
-		height:7%;
+		height:3em;
 		justify-content:space-between;
 		overflow:scroll;		
 		width:100%;
   	}
+  	&::-webkit-scrollbar { 
+    	display: none;
+	}
 `;
 
 class Sidebar extends React.Component {
@@ -85,7 +88,6 @@ class Sidebar extends React.Component {
 					<StyledLink to="/resume">Resume</StyledLink>
 					<StyledLink to="/contact">Contact</StyledLink>
 				</LinkSet>
-
 			</Wrapper>
 		)
 	}
